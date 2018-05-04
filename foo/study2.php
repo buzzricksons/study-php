@@ -15,6 +15,10 @@ foreach ($vegetables3 as $v2) {
 }
 print implode(',', $vegetables1)."\n";
 
+$color = 'yellow, red, blue, puple';
+$color_list = explode(',', $color);
+print "second is$color_list[1]\n";
+
 
 unset($vegetables2['beet']);
 foreach ($vegetables2 as $k => $v) {
@@ -34,4 +38,7 @@ print in_array('yellow2', $vegetables1)."\n";
 print array_search('yellow', $vegetables1)."\n";
 print array_search('yellow2', $vegetables1)."\n";
 
+$meals = array('breakfast' => ['macmorning', 'coffee'], 'lunch' => ['bread', 'cola']
+,'dinner' => ['steak', 'beer']);
 
+print "multiple array: ".$meals['lunch'][1]."\n";

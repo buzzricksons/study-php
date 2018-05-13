@@ -7,13 +7,15 @@
  */
 require 'Entree.php';
 
-$soup = new Entree;
-$soup->name = 'chicken soup';
-$soup->ingredients = array('chicken', 'water');
+$soup = new Entree('chicken soup', array('chicken', 'water'));
+//$soup = new Entree;
+//$soup->name = 'chicken soup';
+//$soup->ingredients = array('chicken', 'water');
 
-$sand = new Entree;
-$sand->name = 'chicken sand';
-$sand->ingredients = array('chicken', 'bread');
+$sand = new Entree('chicken sand', array('chicken', 'bread'));
+//$sand = new Entree;
+//$sand->name = 'chicken sand';
+//$sand->ingredients = array('chicken', 'bread');
 
 foreach(['chicken', 'lemon', 'bread', 'water'] as $ing) {
     if ($soup->hasIngredient($ing)) {
@@ -24,4 +26,7 @@ foreach(['chicken', 'lemon', 'bread', 'water'] as $ing) {
         print "sand detail:$ing.\n";
     }
 }
+
+$sizes = sizeof(Entree::getSizes());
+print "sizes: $sizes.\n";
 

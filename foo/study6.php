@@ -30,3 +30,12 @@ foreach(['chicken', 'lemon', 'bread', 'water'] as $ing) {
 $sizes = sizeof(Entree::getSizes());
 print "sizes: $sizes.\n";
 
+
+try {
+    $drink = new Entree('milk one cup', 'milk');
+    if ($drink->hasIngredient('milk')) {
+        print "delicious!";
+    }
+} catch (Exception $e) {
+    print "drink has not ready: " . $e->getMessage();
+}
